@@ -5,19 +5,19 @@
 <head>
 	<title><sitemesh:write property='title' /></title>
 	
-	<link href="<c:url value="resources/styles/jquery/ui/1.11.3/jquery-ui.min.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/jquery/ui/1.11.3/jquery-ui.structure.min.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/jquery/ui/1.11.3/jquery-ui.theme.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/simple-sidebar.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/css/boon.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/jquery/ui/1.11.3/jquery-ui.min.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/jquery/ui/1.11.3/jquery-ui.structure.min.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/jquery/ui/1.11.3/jquery-ui.theme.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/bootstrap/3.3.2/css/simple-sidebar.css" />" rel="stylesheet">
+	<link href="<c:url value="web-resources/styles/css/boon.css" />" rel="stylesheet">
 <%-- 	<link href="<c:url value="resources/styles/css/main.css" />" rel="stylesheet"> --%>
 	
-	<script src="<c:url value="resources/styles/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
-	<script src="<c:url value="resources/styles/jquery/jquery-1.11.2.min.js" />"></script>
-	<script src="<c:url value="resources/styles/jquery/ui/1.11.3/jquery-ui.min.js" />"></script>
-	<script src="<c:url value="resources/styles/js/common.js" />" ></script>
+	<script src="<c:url value="web-resources/styles/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
+	<script src="<c:url value="web-resources/styles/jquery/jquery-1.11.2.min.js" />"></script>
+	<script src="<c:url value="web-resources/styles/jquery/ui/1.11.3/jquery-ui.min.js" />"></script>
+	<script src="<c:url value="web-resources/styles/js/common.js" />" ></script>
 	
 	<sitemesh:write property='head' />
 </head>

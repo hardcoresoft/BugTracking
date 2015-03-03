@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 
-	<display-name>HARDCORESOFT</display-name>
+	<display-name>Bug Tracking</display-name>
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -38,7 +38,6 @@
 		<filter-name>sitemesh</filter-name>
 		<filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
 	</filter>
-
 
 	<!-- Servlet Mapping -->
 	<filter-mapping>

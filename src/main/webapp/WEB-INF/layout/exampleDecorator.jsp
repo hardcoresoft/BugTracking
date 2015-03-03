@@ -1,20 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="../jsp/taglib_includes.jsp" %>
 
 <!DOCTYPE>
 <html>
 <head>
 	<title><sitemesh:write property='title' /></title>
 	
-	<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
-	<link href="<c:url value="/resources/js/jquery-ui/1.11.1/jquery-ui.min.css" />" rel="stylesheet">
-	<link href="<c:url value="/resources/js/jquery/dateTimePicker/jquery.datetimepicker.css" />" rel="stylesheet">
+	<link href="resources/jquery/ui/1.11.3/jquery-ui.min.css" rel="stylesheet">
+	<link href="<c:url value="resources/jquery/ui/1.11.3/jquery-ui.structure.min.css" />" rel="stylesheet">
+	<link href="<c:url value="resources/jquery/ui/1.11.3/jquery-ui.theme.css" />" rel="stylesheet">
+	<link href="<c:url value="resources/css/boon.css" />" rel="stylesheet">
+	<link href="<c:url value="resources/css/main.css" />" rel="stylesheet">
 	
-	<script src="<c:url value="/resources/js/jquery/jquery-1.11.1.min.js" />"></script>
-	<script src="<c:url value="/resources/js/jquery-ui/1.11.1/jquery-ui.min.js" />"></script>
-	<script src="<c:url value="/resources/js/jquery/dateTimePicker/jquery.datetimepicker.js" />" ></script>
+	<script src="<c:url value="resources/jquery/jquery-1.11.2.min.js" />"></script>
+	<script src="<c:url value="resources/jquery/ui/1.11.3/jquery-ui.min.js" />"></script>
+	<script src="<c:url value="resources/js/common.js" />" ></script>
 	
 	<sitemesh:write property='head' />
 </head>

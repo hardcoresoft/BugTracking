@@ -1,20 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ include file="/WEB-INF/jsp/taglib_includes.jsp" %>
+
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>:: Welcome ::</title>
+
+	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
+	
+	<script src="<c:url value="resources/styles/jquery/jquery-1.11.2.min.js" />"></script>
+	<script src="<c:url value="resources/styles/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+
 </head>
 <body>
-	<h1>Welcome Page</h1>
-	<p>Everyone has access to this page.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-		ac velit et ante laoreet eleifend. Donec vitae augue nec sem
-		condimentum varius.</p>
-
-	<p>เลือกสื่อที่จะส่ง, consectetur รายสัปดาห์ซูมออฟติคัล
-		ตรวจคนเข้าเมือง ac กริดและเทรสิปั๊ม eleifend
-		คุ้มครองประวัติผู้ถือมิได้ SEM condimentum varius</p>
+	<h1>Welcome Index Page</h1>
+	<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to save changes you made to document before closing?</p>
+                <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

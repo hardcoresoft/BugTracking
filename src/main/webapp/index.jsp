@@ -6,11 +6,11 @@
 <meta charset="UTF-8">
 <title>:: Welcome ::</title>
 
-	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
-	<link href="<c:url value="resources/styles/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
+<%-- 	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet"> --%>
+<%-- 	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet"> --%>
 	
-	<script src="<c:url value="resources/styles/jquery/jquery-1.11.2.min.js" />"></script>
-	<script src="<c:url value="resources/styles/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
+<%-- 	<script src="<c:url value="web-resources/jquery/jquery-1.11.2.min.js" />"></script> --%>
+<%-- 	<script src="<c:url value="web-resources/bootstrap/3.3.2/js/bootstrap.min.js" />"></script> --%>
 
 
 <script type="text/javascript">

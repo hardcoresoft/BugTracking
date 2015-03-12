@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.domain;
+package th.co.hardcoresoft.common.domain;
 
 import java.io.Serializable;
 import java.util.Calendar;
@@ -16,7 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.SpringSecurityCoreVersion;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import th.co.hardcoresoft.bugtracking.enumuration.RoleDefined;
+import th.co.hardcoresoft.security.enumuration.RoleDefined;
 
 @MappedSuperclass
 public abstract class BaseDomain implements Serializable {

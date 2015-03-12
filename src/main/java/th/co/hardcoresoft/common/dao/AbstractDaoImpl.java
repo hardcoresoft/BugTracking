@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.dao;
+package th.co.hardcoresoft.common.dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -14,48 +16,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public abstract class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T, PK> {
+public abstract class AbstractDaoImpl<T, PK extends Serializable> implements AbstractDao<T, PK> {
 
-//	protected Log log = LogFactory.getLog(getClass());
+	protected Log log = LogFactory.getLog(getClass());
 	protected Class<T> persistentClass;
 
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@SuppressWarnings("unchecked")
-	public BaseDaoImpl() {
-		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass())
-				.getActualTypeArguments()[0];
+	public AbstractDaoImpl() {
+		this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 
 	protected Session getCurrentSession() {
-		return this.sessionFactory.getCurrentSession();
+		return sessionFactory.getCurrentSession();
 	}
 
 	protected Criteria createCriteria() {
-		return this.sessionFactory.getCurrentSession().createCriteria(persistentClass);
+		return getCurrentSession().createCriteria(persistentClass);
 	}
 
 	protected Query createQuery(String hql) {
-		return this.sessionFactory.getCurrentSession().createQuery(hql);
+		return getCurrentSession().createQuery(hql);
 	}
-
-	/*
-	 * CRUD Operations listed below...
-	 */
 
 	@SuppressWarnings("unchecked")
 	public T get(PK id) {
-		T entity = (T) this.sessionFactory.getCurrentSession().get(this.persistentClass, id);
+		T entity = (T) this.getCurrentSession().get(this.persistentClass, id);
 		if (entity == null) {
-			throw new EntityNotFoundException(this.persistentClass + " with id '"+ id + "' not found.");
+			throw new EntityNotFoundException(this.persistentClass + " with id '" + id + "' not found.");
 		}
 		return entity;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<T> getAll() {
-		return this.sessionFactory.getCurrentSession().createCriteria(persistentClass).list();
+		return this.getCurrentSession().createCriteria(persistentClass).list();
+
+		//return this.getCurrentSession(). load(persistentClass);
 	}
 
 	/**
@@ -64,24 +63,24 @@ public abstract class BaseDaoImpl<T, PK extends Serializable> implements BaseDao
 	 */
 	@SuppressWarnings("unchecked")
 	public T saveOrUpdate(T entity) {
-		return (T) this.sessionFactory.getCurrentSession().merge(entity);
+		return ((T) this.getCurrentSession().merge(entity));
 	}
 
 	public void save(T entity) {
-		this.sessionFactory.getCurrentSession().saveOrUpdate(entity);
+		this.getCurrentSession().saveOrUpdate(entity);
 	}
 
 	public void update(T entity) {
-		this.sessionFactory.getCurrentSession().update(entity);
+		this.getCurrentSession().update(entity);
 
 	}
 
 	public void delete(T entity) {
-		this.sessionFactory.getCurrentSession().delete(entity);
+		this.getCurrentSession().delete(entity);
 	}
 
 	public void delete(PK id) {
-		this.sessionFactory.getCurrentSession().delete(this.get(id));
+		this.getCurrentSession().delete(this.get(id));
 	}
 
 	public void delete(PK[] ids) {

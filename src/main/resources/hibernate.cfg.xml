@@ -13,8 +13,8 @@
 		<mapping class="th.co.hardcoresoft.bugtracking.domain.Example" />
 		
 		<!-- Security -->
-		<mapping class="th.co.hardcoresoft.bugtracking.domain.User" />
-		<mapping class="th.co.hardcoresoft.bugtracking.domain.Role" />
+		<mapping class="th.co.hardcoresoft.security.domain.User" />
+		<mapping class="th.co.hardcoresoft.security.domain.Role" />
 				
 	</session-factory>
 

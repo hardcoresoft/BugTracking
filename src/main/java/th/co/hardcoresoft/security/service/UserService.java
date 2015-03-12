@@ -1,10 +1,10 @@
-package th.co.hardcoresoft.bugtracking.service;
+package th.co.hardcoresoft.security.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.UserDetailsManager;
 
-import th.co.hardcoresoft.bugtracking.domain.User;
+import th.co.hardcoresoft.security.domain.User;
 
 public interface UserService extends UserDetailsManager, UserDetailsService {
 

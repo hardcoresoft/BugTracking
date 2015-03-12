@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.service;
+package th.co.hardcoresoft.security.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,9 +22,9 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
-import th.co.hardcoresoft.bugtracking.dao.UserDao;
-import th.co.hardcoresoft.bugtracking.domain.Role;
-import th.co.hardcoresoft.bugtracking.domain.User;
+import th.co.hardcoresoft.security.dao.UserDao;
+import th.co.hardcoresoft.security.domain.Role;
+import th.co.hardcoresoft.security.domain.User;
 
 /**
  * A custom {@link UserDetailsService} where user information is retrieved from
@@ -159,7 +159,7 @@ public class UserServiceImpl implements UserService {
 	 * @return a collection of {@link GrantedAuthority
 
 	 */
-	public Collection<? extends GrantedAuthority> getAuthorities(th.co.hardcoresoft.bugtracking.domain.User domainUser) {
+	public Collection<? extends GrantedAuthority> getAuthorities(th.co.hardcoresoft.security.domain.User domainUser) {
 		List<GrantedAuthority> authList = getGrantedAuthorities(getRoles(domainUser));
 		return authList;
 	}
@@ -171,7 +171,7 @@ public class UserServiceImpl implements UserService {
 	 *            the numerical role
 	 * @return list of roles as as a list of {@link String}
 	 */
-	public List<String> getRoles(th.co.hardcoresoft.bugtracking.domain.User domainUser) {
+	public List<String> getRoles(th.co.hardcoresoft.security.domain.User domainUser) {
 		List<String> authorities = new ArrayList<String>();
 
 		List<Role> roles = domainUser.getRoles();

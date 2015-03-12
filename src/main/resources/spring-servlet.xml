@@ -104,7 +104,7 @@
 
 	<!-- Spring Security -->
 	<bean id="customUserDetailsService"
-		class="th.co.hardcoresoft.bugtracking.service.CustomUserDetailsService" />
+		class="th.co.hardcoresoft.security.service.CustomUserDetailsService" />
 
 	<bean name="bcryptEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">

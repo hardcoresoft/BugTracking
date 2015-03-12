@@ -5,17 +5,18 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import th.co.hardcoresoft.bugtracking.domain.Example;
+import th.co.hardcoresoft.common.dao.AbstractDaoImpl;
 
 @Repository
-public class ExampleDaoImpl extends BaseDaoImpl<Example, Integer> implements ExampleDao {
+public class ExampleDaoImpl extends AbstractDaoImpl<Example, Integer> implements ExampleDao {
 
 	public void addExample(Example example) {
-		getCurrentSession().save(example);
+		save(example);
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Example> listExample() {
-		return getCurrentSession().createQuery("from Example").list();
+		return getCurrentSession().createCriteria(Example.class).list();
 	}
 
 	public void removeExample(Integer id) {

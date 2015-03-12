@@ -1,9 +1,9 @@
-package th.co.hardcoresoft.bugtracking.dao;
+package th.co.hardcoresoft.common.dao;
 
 import java.io.Serializable;
 import java.util.List;
 
-public interface BaseDao<T, PK extends Serializable> {
+public interface AbstractDao<T, PK extends Serializable> {
     
 	public T get(PK id);
 

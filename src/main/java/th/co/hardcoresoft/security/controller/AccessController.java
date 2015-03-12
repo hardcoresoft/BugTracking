@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.controller;
+package th.co.hardcoresoft.security.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/access")
 public class AccessController {
 
 	protected String username;
@@ -34,9 +34,9 @@ public class AccessController {
 //			HttpSession session = request.getSession();
 //			session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
 //
-//			return "redirect:/success";
+//			return "redirect:/access/success";
 //		} catch (AuthenticationException ex) {
-//			return "redirect:/login";
+//			return "redirect:/access/login";
 //		}
 //	}
 
@@ -58,13 +58,13 @@ public class AccessController {
 	public String loginFailure(Model model) {
 		String message = "Invalid Username or Password!";
 		model.addAttribute("message", message);
-		return "redirect:/login";
+		return "redirect:/access/login";
 	}
 
 	@RequestMapping(value = "/logout/success")
 	public String logoutSuccess() {
 		//String message = "Logout Success!";
-//		return "redirect:/login?message=" + message;
-		return "redirect:/login";
+//		return "redirect:/access/login?message=" + message;
+		return "redirect:/access/login";
 	}
 }

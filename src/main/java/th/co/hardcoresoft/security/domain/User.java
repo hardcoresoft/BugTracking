@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.domain;
+package th.co.hardcoresoft.security.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,6 +30,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.SpringSecurityCoreVersion;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.Assert;
+
+import th.co.hardcoresoft.common.domain.BaseDomain;
 
 @Entity
 @Table(name = "USER")

@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.domain;
+package th.co.hardcoresoft.security.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,6 +16,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.ForeignKey;
 import org.hibernate.annotations.Index;
+
+import th.co.hardcoresoft.common.domain.BaseDomain;
 
 @Entity
 @Table(name = "ROLE")

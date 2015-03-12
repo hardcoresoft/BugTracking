@@ -178,12 +178,12 @@
 		</dependency>
 
 		<!-- HardcoreSoft Libraries -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>th.co.hardcoresoft</groupId>
 			<artifactId>hardcoresoft-common</artifactId>
 			<type>jar</type>
 			<version>1.0-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- JUnit Test -->
 		<dependency>

@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import th.co.hardcoresoft.common.domain.BaseDomain;
+
 @Entity
 @Table(name = "EXAMPLE")
 public class Example extends BaseDomain {

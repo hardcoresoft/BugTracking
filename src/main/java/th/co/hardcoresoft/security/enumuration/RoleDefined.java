@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.enumuration;
+package th.co.hardcoresoft.security.enumuration;
 
 public enum RoleDefined {
 

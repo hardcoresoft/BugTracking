@@ -11,34 +11,34 @@
 
 	<title><sitemesh:write property='title' /></title>
 	
-	<link href="<c:url value="web-resources/jquery/ui/1.11.3/jquery-ui.min.css" />" rel="stylesheet">
-	<link href="<c:url value="web-resources/jquery/ui/1.11.3/jquery-ui.structure.min.css" />" rel="stylesheet">
-	<link href="<c:url value="web-resources/jquery/ui/1.11.3/jquery-ui.theme.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/jquery/ui/1.11.3/jquery-ui.min.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/jquery/ui/1.11.3/jquery-ui.structure.min.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/jquery/ui/1.11.3/jquery-ui.theme.css" />" rel="stylesheet">
 	
 	<!-- Bootstrap Core CSS -->
-	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
-	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/css/bootstrap-theme.min.css" />" rel="stylesheet">
 	
 	<!-- Custom CSS -->
-	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/simple-sidebar.css" />" rel="stylesheet">
-	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/sb-admin.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/css/simple-sidebar.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/css/sb-admin.css" />" rel="stylesheet">
 	
 	<!-- Morris Charts CSS -->
-	<link href="<c:url value="web-resources/bootstrap/3.3.2/css/plugins/morris.css" />" rel="stylesheet">
-	<link href="<c:url value="web-resources/css/boon.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/css/plugins/morris.css" />" rel="stylesheet">
+	<link href="<c:url value="${request.contextPath}/web-resources/css/boon.css" />" rel="stylesheet">
 	
 	<!-- Custom Fonts -->
-	<link href="<c:url value="web-resources/font-awesome/css/font-awesome.min.css" />" rel="stylesheet" type="text/css">
+	<link href="<c:url value="${request.contextPath}/web-resources/font-awesome/css/font-awesome.min.css" />" rel="stylesheet" type="text/css">
 	
-	<script src="<c:url value="web-resources/jquery/jquery-1.11.2.min.js" />"></script>
-	<script src="<c:url value="web-resources/jquery/ui/1.11.3/jquery-ui.min.js" />"></script>
-	<script src="<c:url value="web-resources/js/common.js" />" ></script>
-	<script src="<c:url value="web-resources/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
+	<script src="<c:url value="${request.contextPath}/web-resources/jquery/jquery-1.11.2.min.js" />"></script>
+	<script src="<c:url value="${request.contextPath}/web-resources/jquery/ui/1.11.3/jquery-ui.min.js" />"></script>
+	<script src="<c:url value="${request.contextPath}/web-resources/js/common.js" />" ></script>
+	<script src="<c:url value="${request.contextPath}/web-resources/bootstrap/3.3.2/js/bootstrap.min.js" />"></script>
 	
 	<!-- Morris Charts JavaScript -->
-    <script src="web-resources/bootstrap/3.3.2/js/plugins/morris/raphael.min.js"></script>
-    <script src="web-resources/bootstrap/3.3.2/js/plugins/morris/morris.min.js"></script>
-    <script src="web-resources/bootstrap/3.3.2/js/plugins/morris/morris-data.js"></script>
+    <script src="${request.contextPath}/web-resources/bootstrap/3.3.2/js/plugins/morris/raphael.min.js"></script>
+    <script src="${request.contextPath}/web-resources/bootstrap/3.3.2/js/plugins/morris/morris.min.js"></script>
+    <script src="${request.contextPath}/web-resources/bootstrap/3.3.2/js/plugins/morris/morris-data.js"></script>
 	
 	<sitemesh:write property='head' />
 	

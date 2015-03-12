@@ -1,4 +1,4 @@
-package th.co.hardcoresoft.bugtracking.controller;
+package th.co.hardcoresoft.security.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * the adminpage, however.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class AdminController {
 
 	/**
@@ -26,7 +26,7 @@ public class AdminController {
 		// Prepare a model to be used by the JSP page
 
 		// This will resolve to /WEB-INF/jsp/commonpage.jsp
-		return "access/commonpage";
+		return "admin/commonpage";
 	}
 
 	/**
@@ -42,6 +42,6 @@ public class AdminController {
 		// Prepare a model to be used by the JSP page
 
 		// This will resolve to /WEB-INF/jsp/adminpage.jsp
-		return "access/adminpage";
+		return "admin/adminpage";
 	}
 }
